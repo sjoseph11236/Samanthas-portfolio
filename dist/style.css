@@ -46,7 +46,7 @@ p{
 }
 
 .banner { 
-  background-image: url("/images/untitled2.png");
+  background-image: url("../dist/images/untitled2.png");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
