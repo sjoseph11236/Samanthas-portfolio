@@ -90,6 +90,7 @@ p{
   top: 100px; 
   left: 2px; */
   text-align: center;
+  margin: 0 0 0 400px;
 }
 
 .site-description{
@@ -115,7 +116,7 @@ p{
   flex-wrap: wrap; 
   justify-content: center;
   align-items: stretch; 
-  margin: 150px 20px 15px 20px;
+  margin: 300px 20px 15px 20px;
 
 }
 
