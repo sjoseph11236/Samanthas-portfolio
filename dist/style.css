@@ -161,8 +161,6 @@ header {
   transition-delay: 0.55s;
 }
 
-
-
 .menu-branding {
   transition: all 0.5s ease-out;
   transform: translate3d(0, 100%, 0);
@@ -181,7 +179,6 @@ header {
   text-align: center;
   letter-spacing: 1px;
 }
-
 
 .entry-title a {
   color: #222;
@@ -249,7 +246,6 @@ header {
   justify-content: center;
   align-items: stretch; 
   margin: 300px 20px 15px 20px;
-
 }
 
 .card { 
@@ -274,7 +270,6 @@ header {
   transition: all 0.2s ease-out;
   top:-10px;
 }
-
 
 .card img {
   max-width: 100%;
@@ -354,6 +349,24 @@ header {
   }
 }
 
+/* About */
+.about-container { 
+  margin: 25px 25px;
+}
+
+.info { 
+  display: flex;
+}
+
+.info p { 
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.info div { 
+  margin: 0 25px 0 25px;
+}
+
 @media(max-width: 320px) {
   .site-title{
     font-size: 25px;
@@ -404,6 +417,8 @@ header {
     top: 150px;
     z-index: 2;
   }
+
+
 }
 
 @media(max-width: 1064px) {
