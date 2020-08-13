@@ -245,7 +245,7 @@ header {
   flex-wrap: wrap; 
   justify-content: center;
   align-items: stretch; 
-  margin: 300px 20px 15px 20px;
+  margin: 15px 20px 15px 20px;
 }
 
 .card { 
@@ -313,6 +313,34 @@ header {
   margin: 0px 0 0 450px;
 }
 
+.poems{ 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.poem { 
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.poem h1 { 
+  text-decoration: underline;
+}
+
+
+.widget-title { 
+  color: #000;
+  background:rgb(239,234,231);
+  font: 10px Montserrat, arial, sans-serif;
+  letter-spacing: 3px;
+  margin: 15px 0px 15px;
+  padding: 6px 0px; 
+  text-align: center;
+  text-transform: uppercase;
+}
+
 @media(max-width: 767px) {
   .site-branding {
     margin: 0px 0px 0px 0px; 
@@ -350,7 +378,7 @@ header {
 }
 
 /* About */
-.about-container { 
+.box { 
   margin: 25px 25px;
 }
 
@@ -417,8 +445,6 @@ header {
     top: 150px;
     z-index: 2;
   }
-
-
 }
 
 @media(max-width: 1064px) {
