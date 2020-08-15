@@ -333,6 +333,9 @@ header {
 .alternate-box { 
   margin: 215px 25px 25px 25px;
 }
+.speaker{
+  font: 15px Montserrat, sans-serif;
+}
 
 .info { 
   display: flex;
@@ -359,6 +362,26 @@ header {
 .poem { 
   margin: auto;
   padding: 20px;
+  text-align: center;
+}
+
+.essay { 
+  margin:0 50px 0 50px;
+  padding: 20px;
+  text-align: left;
+}
+
+.indent {
+  text-indent: 50px;
+}
+
+.essay h1,h2 { 
+  text-decoration: underline;
+  text-align: center;
+}
+
+.work-cited{ 
+  text-decoration: underline;
   text-align: center;
 }
 
@@ -434,13 +457,13 @@ header {
   }
 
   .alternate-box {
-    margin: 50px 25px 25px 25px;
+    margin: 75px 25px 25px 25px;
   }
 }
 
 @media(max-width: 767px) and (min-width: 320px) {
   .alternate-box {
-    margin: 50px 25px 25px 25px;
+    margin: 75px 25px 25px 25px;
   }
 }
 
