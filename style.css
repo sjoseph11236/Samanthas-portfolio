@@ -21,7 +21,7 @@ html, body {
 }
 
 body { 
-  background-image: linear-gradient(90deg, #fdfcfb, #e2d1c3 );
+  background-image: linear-gradient(90deg, #fdfcfb,#FDFCFB);
 }
 
 a { 
@@ -234,7 +234,7 @@ header {
   font-weight: 400; 
   letter-spacing: 1px;
   line-height: 1.5;
-  margin: 10px auto 0; 
+  margin: 10px auto 10px; 
   max-width: 75%;
   text-align: center;
 }
@@ -246,6 +246,19 @@ header {
   justify-content: center;
   align-items: stretch; 
   margin: 15px 20px 15px 20px;
+}
+
+
+.gallery img { 
+  max-width: 100%;
+}
+.cred {   
+  font: 9px Montserrat, sans-serif;
+  text-align: left;
+}
+
+.card .cred { 
+  text-align: left;
 }
 
 .card { 
@@ -265,8 +278,8 @@ header {
 
 .card:hover {
   box-shadow: 4px 4px 12px 0 rgba(0,0,0,0.3);
-  /* background-color: #AF5252; */
-  background-color: rgb(82, 175, 102);
+  /* background-color: rgb(82, 175, 102); */
+  background-color: #BFD7B5;
   transition: all 0.2s ease-out;
   top:-10px;
 }
@@ -317,6 +330,10 @@ header {
   margin: 25px 25px;
 }
 
+.alternate-box { 
+  margin: 215px 25px 25px 25px;
+}
+
 .info { 
   display: flex;
   justify-content: space-between;
@@ -331,6 +348,7 @@ header {
 .info div { 
   margin: 0 25px 0 25px;
 }
+
 .poems{ 
   display: flex;
   justify-content: center;
@@ -351,7 +369,7 @@ header {
 
 .widget-title { 
   color: #000;
-  background:rgb(239,234,231);
+  background:#E2D1C3;
   font: 10px Montserrat, arial, sans-serif;
   letter-spacing: 3px;
   margin: 15px 0px 15px;
@@ -360,17 +378,13 @@ header {
   text-transform: uppercase;
 }
 
-@media(max-width: 767px) {
-  .site-branding {
-    margin: 0px 0px 0px 0px; 
-  }
-
-  .site-title { 
-    margin: 10px 0 5px 0; 
+@media(max-width: 265px) { 
+  .site-footer { 
+    display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media(max-width: 280px) {
   ul.menu-nav.show, div.menu-branding.show {
     transform: translate3d(0, 0, 0);
   }
@@ -390,13 +404,45 @@ header {
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
   }
-
   .menu .nav-link {
-    font: 20px Montserrat, sans-serif;
+    font: 17px Montserrat, sans-serif;
+  }
+  .info{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info div { 
+    margin: 0 25px 0 25px;
+    text-align: center;
+  }
+  .info p {
+    font-size: 14px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+
+  .row { 
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-credit {
+    margin: 0 0 0; 
+  }
+
+  .alternate-box {
+    margin: 50px 25px 25px 25px;
   }
 }
 
-
+@media(max-width: 767px) and (min-width: 320px) {
+  .alternate-box {
+    margin: 50px 25px 25px 25px;
+  }
+}
 
 @media(max-width: 320px) {
   .site-title{
@@ -410,18 +456,68 @@ header {
   .card {
     flex: 0 0 260px;
   }
-  
+
   .info p { 
     font-size: 15px;
     line-height: 25px;
   }
-}
-@media(max-width: 265px) { 
-  .site-footer { 
-    display: none;
+
+  .site-footer {
+    flex-direction: column;
+  }
+
+  .row { 
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-credit {
+    margin: 0 0 0; 
+  }
+  .alternate-box {
+    margin: 50px 25px 25px 25px;
   }
 }
-@media(max-width: 1023px) and (min-width: 265px) {
+
+@media(max-width: 767px) {
+  .site-branding {
+    margin: 0px 0px 0px 0px; 
+  }
+
+  .site-title { 
+    margin: 10px 0 5px 0; 
+  }
+}
+
+@media (max-width: 768px) and (min-width: 281px) {
+  ul.menu-nav.show, div.menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  
+  }
+
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; 
+  }
+
+  .menu-branding { 
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+  
+  }
+
+  .menu-nav { 
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  .menu .nav-link {
+    font: 20px Montserrat, sans-serif;
+  }
+}
+
+@media(max-width: 1023px) and (min-width: 320px) {
   .site-footer {
     flex-direction: column;
   }
@@ -455,7 +551,7 @@ header {
     position: absolute;
     left: 30px;
     top: 150px;
-    z-index: 2;
+    z-index: 1;
   }
 }
 
@@ -466,6 +562,10 @@ header {
     left: 45px;
     top: 150px;
     z-index: 2;
+  }
+
+  .menu .nav-link {
+    font: 30px Montserrat, sans-serif;
   }
 }
 
