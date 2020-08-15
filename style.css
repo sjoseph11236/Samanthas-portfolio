@@ -333,6 +333,7 @@ header {
 .alternate-box { 
   margin: 315px 25px 25px 25px;
 }
+
 .speaker{
   font: 15px Montserrat, sans-serif;
 }
@@ -366,7 +367,7 @@ header {
 }
 
 .essay { 
-  margin:0 50px 0 50px;
+  /* margin:0 15px 0 15px; */
   padding: 20px;
   text-align: left;
 }
