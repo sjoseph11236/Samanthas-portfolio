@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+p, a {
+  line-height: 150%;
+  color: #000;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+:not(svg) {
+  transform-origin: 0px 0px;
+}
+body{
+  display: block;
+  cursor: pointer;
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  padding : 0 5vw;
+  background: #ebebeb;
+  border: 20px solid #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+div {
+  display: block;
+}
+
+header {
+  justify-content: center;
+  margin: 0;
+}
+
+
+h1 {
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: #F0F1EC;
+  margin: 50px 0;
+  font-weight: bold;
+  color:  #4D272E;
+}
+h2 {
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 14xpx;
+  text-align: center;
+  color: #F0F1EC;
+  margin: 50px 0;
+  font-weight: bold;
+  color:  #4D272E;
+}
+/* h2 {
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  justify-content: center;
+  text-align: center;
+  color: #F0F1EC;
+  font-size: 35px;
+  margin: 50px 0;
+  font-weight: bold;
+  color:  #4D272E;
+} */
+
+.blocks {
+  background-color: #E87E5B;
+  content: '';
+  width: 35vw;
+}
+
+.container:before {
+  content: '';
+  width: 35vw;
+  height: 35vw;
+  background: linear-gradient( to bottom right, #EFD1C6, rgb(239,209,198));
+  border-radius: 50%;
+  position: absolute;
+  left: -100px;
+}
+
+.container {
+  margin-top: 100px;
+  display: inline-block;
+  position: relative;
+  float: left;
+  left: 20px;
+  width: 20vw;
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  background: #4E121F ;
+  z-index: -100;
+  left: 200px;
+  border-radius: 50%;
+  top: 0px;
+  box-shadow: inset -1px 4px 13px 0px #ff9595;
+  animation: shadow 3.5s infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+
+.photo.clip-path {
+  -webkit-filter: saturate(1.5);
+  filter: saturate(1.5);
+  animation: move 1s infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+
+h1.title {
+  position: absolute;
+  writing-mode: vertical-lr;
+  margin-left: -80px;
+  margin-top: 240px;
+}
+
+.heading {
+  margin: 50 0px 50px 0;
+  height: 10px 455px;
+}
+
+.text-container {
+  display: inline-block;
+  float: right;
+  position: relative;
+  width: 45%;
+}
+.water {
+  position: absolute;
+  background-image: url(http://aganaplocha.com/netmag/plants/images/water.png);
+  width: 170px;
+  height: 170px;
+  background-color: #333;
+  top: 70px;
+  border-radius: 50%;
+  animation: rotate 5.5s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.photo-shadow {
+  width: 550px;
+  height: 600px;
+  position: absolute;
+  z-index: 10;
+  background-color: #F9DBAC;
+  clip-path: url(#clip-plant);
+  left: -8px;
+  top: 8px;
+  animation: changeBg 1.5s infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+
+.photo {
+  width: 1000px;
+  height: 1000px;
+  /* background-image: url(./images/fatherhood_2.jpeg); */
+  /* background-image: url("https://fydn.imgix.net/m%2Fgen%2Fart-print-std-portrait-framed-oak%2Fdf5ae0de-b41c-43f5-85b6-e6153687907d.jpg?auto=format%2Ccompress&q=75"); */
+  /* background-image: url(./images/fatherhood_2.jpeg); */
+  z-index: 20;
+  position: relative;
+  background-size: 1172px;
+  background-repeat: no-repeat;
+  background-position: -325px -61px;
+  webkit-clip-path: url(#clip-plant);
+  clip-path: url(#clip-plant);
+}
+
+.photo.below {
+  clip-path: none;
+  z-index: -1000;
+  background-color: #F9DBAC;
+  background-blend-mode: lighten;
+  width: 800px;
+  opacity: .33;
+  position: fixed;
+}
+
+.wrapper::after {
+  content : " ";
+  display: block;
+  clear: both;
+}
+
+
+@keyframes changeBg {
+  0% {
+    background-color: #ff9595;
+  }
+
+  100% {
+    background-color: #F9DBAC;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0) ;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move{
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: inset -1px 4px 13px 0px #ff9595;
+  }
+
+  10% {
+    box-shadow: inset -3px 4px 10px 0px  #ff9595;
+  }
+
+  20% {
+    box-shadow: inset -6px 4px 7px 0px  #ff9595;
+  }
+
+  30% {
+    box-shadow: inset -9px 4px 4px 0px #ff9595;
+  }
+
+  40% {
+    box-shadow: inset -9px 4px 1px 0px #ff9595;
+  }
+  50% {
+    box-shadow: inset -14px 4px 3px 0px #ff9595;
+  }
+  60% {
+    box-shadow: inset 12px 4px 6px 0px #ff9595;
+  }
+  70% {
+    box-shadow: inset 11px 4px 9px 0px #ff9595;
+  }
+  80% {
+    box-shadow: inset 9px 4px 12px 0px #ff9595;
+  }
+
+
+}
